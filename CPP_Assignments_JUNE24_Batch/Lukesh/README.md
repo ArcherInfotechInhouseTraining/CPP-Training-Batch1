@@ -1,12 +1,6 @@
-
 # CPP-Training-Batch1
 
-## CPP NOV.23 Branch
-
-# CPP-Training-Batch2
-
-## CPP MAR.24 Branch
-
+## CPP JUNE.24 Branch
 
 # C++ Programming Guide
 
@@ -22,9 +16,7 @@ This guide provides a comprehensive introduction to C++ programming, covering ke
 6. [Operators](#operators)
 7. [Control Statements](#control-statements)
 8. [Functions](#functions)
-9. [Object-Oriented Programming](#object-oriented-programming)
-10. [Example Programs](#example-programs)
-11. [Additional Resources](#additional-resources)
+
 
 
 ### History of C++
@@ -105,11 +97,3 @@ The document provides various sample programs:
 - **Data Type Demonstrations** - Showing use of `int`, `float`, `char`, etc.
 - **Object-Oriented Programs** - Example classes for banking, time management, complex numbers, etc.
 
-### Additional Resources
-To explore more about C++ programming, consider the following:
-- **C++ Reference**: [cppreference.com](https://en.cppreference.com/)
-- **Tutorials**: TutorialsPoint, GeeksforGeeks, W3Schools
-- **Books**: *The C++ Programming Language* by Bjarne Stroustrup, *Effective C++* by Scott Meyers
-
-
-- This document provides a solid foundation for understanding and writing C++ programs, from basic syntax to complex OOP features. Explore each section to deepend your C++ knowledge!
