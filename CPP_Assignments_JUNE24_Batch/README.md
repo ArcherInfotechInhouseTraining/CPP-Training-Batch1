@@ -1,6 +1,6 @@
 # CPP-Training-Batch1
 
-## CPP NOV.23 Branch
+## CPP  Branch JUNE 24 Batch
 
 # C++ Programming Guide
 
