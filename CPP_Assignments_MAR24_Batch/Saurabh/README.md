@@ -1,8 +1,8 @@
-# CPP-Training-Batch1
+# CPP-Training-Batch2
 
-## CPP NOV.23 Branch
+## CPP MAR.24 Branch
 
-# C++ Programming Guide
+# C++ Notes and Lab programs are mentioned Here:- 
 
 ## Overview
 This guide provides a comprehensive introduction to C++ programming, covering key concepts such as data types, operators, control structures, functions, object-oriented programming (OOP), and other advanced topics.
@@ -21,21 +21,6 @@ This guide provides a comprehensive introduction to C++ programming, covering ke
 11. [Additional Resources](#additional-resources)
 
 
-### History of C++
-- Evolved from languages like ALGOL, BCPL, B, and C.
-- Developed in the early 1980s by Bjarne Stroustrup at AT&T Bell Labs.
-- Combines object-oriented features with the speed of C, making it suitable for low-level programming and system interfaces.
-
-### C++ Versions
-C++ has seen various iterations, with major versions introducing new features:
-- **C++98, C++03** - Core features like classes, function overloading.
-- **C++11** - Introduced lambda expressions, `auto` keyword, and smart pointers.
-- **C++14, C++17, C++20, C++23** - Incremental improvements, including support for concepts and coroutines.
-
-### Compilers and IDEs
-Common C++ compilers and IDEs include:
-- **Compilers**: GCC, G++, MSVC, Clang
-- **IDEs**: Visual Studio, Code::Blocks, Eclipse, CLion
 
 ### Basic C++ Syntax
 A simple C++ program includes headers, a `main` function, and uses `cin` and `cout` for input and output. Comments can be added using `//` for single-line or `/* */` for multi-line.
@@ -93,17 +78,4 @@ class BankAccount {
 };
 ```
 
-### Example Programs
-The document provides various sample programs:
-- **Simple Input/Output** - Using `cin` and `cout`
-- **Data Type Demonstrations** - Showing use of `int`, `float`, `char`, etc.
-- **Object-Oriented Programs** - Example classes for banking, time management, complex numbers, etc.
 
-### Additional Resources
-To explore more about C++ programming, consider the following:
-- **C++ Reference**: [cppreference.com](https://en.cppreference.com/)
-- **Tutorials**: TutorialsPoint, GeeksforGeeks, W3Schools
-- **Books**: *The C++ Programming Language* by Bjarne Stroustrup, *Effective C++* by Scott Meyers
-
-
-- This document provides a solid foundation for understanding and writing C++ programs, from basic syntax to complex OOP features. Explore each section to deepend your C++ knowledge!
