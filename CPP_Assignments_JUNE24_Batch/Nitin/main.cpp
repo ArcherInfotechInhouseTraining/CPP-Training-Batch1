@@ -3533,8 +3533,7 @@ Count the number of occurrences of a specific character in a string using the ov
 //
 //    return 0;
 //}
-///------------concate two string--------
-//
+///------------concate two string-----
 //
 ///===========================================================================================================================================
 /** Type conversion in C++:
@@ -4248,6 +4247,114 @@ Using "protected": It is visibility modifier/Accessibility specifier, which is u
 
 
 
+
+
+=======
+//#include<string.h>
+//using namespace std;
+//class String
+//{
+//    char str[50];
+//    public:
+//        String(){};
+//        String(char t[])
+//        {
+//            strcpy(str,t);
+//        }
+//        void setstring()
+//        {
+//            cout << "\n Enter any string : ";
+//            cin.getline(str,50);
+//        }
+//        char* getstring()
+//        {
+//            return str;
+//        }
+//        String operator +(String &s)
+//        {
+//            String tmp;
+//            strcpy(tmp.str,str);
+//            strcat(tmp.str,s.str);
+//            return tmp;
+//        }
+//        int operator/(char ch)
+//        {
+//           int cnt=0;
+//            for(int i=0;i<str[i]!='\0';i++)
+//            {
+//                if(str[i]==ch)
+//                {
+//                    cnt++;
+//                }
+//            }
+//            return cnt;
+//        }
+//};
+//
+//int main()
+//{
+//    String s0("hellow");
+//    String s1;
+//    s1.setstring();
+//    cout << "\n String is : "<<s0.getstring();
+//    cout << "\n String is : "<<s1.getstring();
+//
+//    String s2;
+//    s2=s0+s1;
+//    cout << "\n String is : "<<s2.getstring();
+//
+//    char ch;
+//    cout << "\n Enter character to cnt : ";
+//    cin>>ch;
+//
+//    int t=s2/ch;
+//
+//    cout << "\n "<<ch<< " character present "<<t<< " times.";
+//
+//    return 0;
+//}
+///===========================================================================================================================================
+/** Type conversion in C++:
+
+
+	int x=10;
+	double y=x; // here int converted to double.
+
+	y=(double)x/3
+
+	Then we have to see, now the type conversion happens in classes.
+
+	- base type to class type (default conversion) - constructor
+	- class type to base type (conversion function) - member function/ operator overload
+	- class type to another class type (source to destination conversion)
+*/
+//
+//- base type to class type:
+//
+//class Complex
+//{
+//	int real;
+//	float img;
+//    public:
+//	Complex()
+//	{
+//		real=1;
+//		img=1.1;
+//	}
+//	Complex(int a1, float a2)
+//	{
+//		real=a1;
+//		img=a2;
+//	}
+//
+//	.......
+//}
+//
+//...
+//
+//	Complex ob(3,45.41);
+
+//--------------------------------------------------------
 
 
 
