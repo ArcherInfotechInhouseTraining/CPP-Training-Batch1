@@ -3535,69 +3535,7 @@ Count the number of occurrences of a specific character in a string using the ov
 //}
 ///------------concate two string--------
 //
-//#include<string.h>
-//using namespace std;
-//class String
-//{
-//    char str[50];
-//    public:
-//        String(){};
-//        String(char t[])
-//        {
-//            strcpy(str,t);
-//        }
-//        void setstring()
-//        {
-//            cout << "\n Enter any string : ";
-//            cin.getline(str,50);
-//        }
-//        char* getstring()
-//        {
-//            return str;
-//        }
-//        String operator +(String &s)
-//        {
-//            String tmp;
-//            strcpy(tmp.str,str);
-//            strcat(tmp.str,s.str);
-//            return tmp;
-//        }
-//        int operator/(char ch)
-//        {
-//           int cnt=0;
-//            for(int i=0;i<str[i]!='\0';i++)
-//            {
-//                if(str[i]==ch)
-//                {
-//                    cnt++;
-//                }
-//            }
-//            return cnt;
-//        }
-//};
 //
-//int main()
-//{
-//    String s0("hellow");
-//    String s1;
-//    s1.setstring();
-//    cout << "\n String is : "<<s0.getstring();
-//    cout << "\n String is : "<<s1.getstring();
-//
-//    String s2;
-//    s2=s0+s1;
-//    cout << "\n String is : "<<s2.getstring();
-//
-//    char ch;
-//    cout << "\n Enter character to cnt : ";
-//    cin>>ch;
-//
-//    int t=s2/ch;
-//
-//    cout << "\n "<<ch<< " character present "<<t<< " times.";
-//
-//    return 0;
-//}
 ///===========================================================================================================================================
 /** Type conversion in C++:
 
@@ -3640,10 +3578,678 @@ Count the number of occurrences of a specific character in a string using the ov
 //	Complex ob(3,45.41);
 
 //--------------------------------------------------------
+/**
+    - Types of Inheritance
 
-	// - class type to base type
 
-using namespace std;
+            single          Multi-level          hierarchical        Multiple         Hybrid           dimond
+          Inheritance       Inheritance           Inheritance       Inheritance     Inheritance
+
+             [   ] A            [     ]  A             [ ] A           A       B       [ ]A                  A
+               |                   |                    |              [ ]     [ ]      |                   [ ]
+               |                [     ]  B        --------------        |_______|      [ ] B                 |
+               V                   |              |            |             |          |         D     -------------
+             [   ]  B           [     ]  C       [ ]B         [ ]c          [ ]        [ ] C     [ ]    |           |
+                                                  |            |             C          |         |    [ ] B       [ ] C
+                                              ---------      ---------                 [ ] -------|     |___________|
+                                              |        |     |   |    |                 Z                     |
+                                             [ ]      [ ]   [ ] [ ]  [ ]                                     [ ]
+                                              D        E     F   G    H                                       D
+
+    - Single Inheritance:   One to one relationship, two layers
+    - Multi-level Inheritance: one to one relationship, more than two layers
+    - Hierarchical Inheritance: One to many relationship
+    - Multiple Inheritance: many to one relationship
+    - Hybrid Inheritance: combinations of any two or more inheritance
+*/
+///===========================================================================================================================================
+///- Single Inheritance : (public - called all methods from main() )
+//
+//using namespace std;
+//class Person
+//{
+//    int uid;
+//    char name[40];
+//    public:
+//        void input()
+//        {
+//            cout << "\n Enter name and uid : ";
+//            cin >> name>>uid;
+//        }
+//        void output()
+//        {
+//            cout << "\nName : "<<name << "\tUid : "<<uid;
+//        }
+//};
+//class Employee : public Person
+//{
+//    float sal;
+//    public:
+//        void in()
+//        {
+//
+//            cout << "\n Enter the empolyee Salary : ";
+//            cin>>sal;
+//        }
+//        void out()
+//        {
+//            //            cout << "\nEmpolyee Salary : "<<sal;
+//        }
+//};
+//int main()
+//{
+//    Employee e1;
+//    e1.input();
+//    e1.in();
+//    e1.output();
+//    e1.out();
+//    return 0;
+//}
+///===========================================================================================================================================
+///	- Single Inheritance: (public - called base methods from child class methods )
+//
+//using namespace std;
+//class Person
+//{
+//    int uid;
+//    char name[40];
+//    public:
+//        void input()
+//        {
+//            cout << "\n Enter name and uid : ";
+//            cin >> name>>uid;
+//        }
+//        void output()
+//        {
+//            cout << "\nName : "<<name << "\tUid : "<<uid;
+//        }
+//};
+//class Employee : public Person
+//{
+//    float sal;
+//    public:
+//        void in()
+//        {
+//            input();
+//            cout << "\n Enter the empolyee Salary : ";
+//            cin>>sal;
+//        }
+//        void out()
+//        {
+//            output();
+//            cout << "\nEmpolyee Salary : "<<sal;
+//        }
+//};
+//int main()
+//{
+//    Employee e1;
+//    e1.in();
+//    e1.out();
+//    return 0;
+//}
+//
+///===========================================================================================================================================
+///	- Single Inheritance: (private - called inherited methods only from the child methods  )
+
+//
+//using namespace std;
+//class Person
+//{
+//    int uid;
+//    char name[40];
+//    public:
+//        void input()
+//        {
+//            cout << "\n Enter name and uid : ";
+//            cin >> name>>uid;
+//        }
+//        void output()
+//        {
+//            cout << "\nName : "<<name << "\tUid : "<<uid;
+//        }
+//};
+//class Employee : private Person
+//{
+//    float sal;
+//    public:
+//        void in()
+//        {
+//            input();
+//            cout << "\n Enter the empolyee Salary : ";
+//            cin>>sal;
+//        }
+//        void out()
+//        {
+//            output();
+//            cout << "\nEmpolyee Salary : "<<sal;
+//        }
+//};
+//int main()
+//{
+//    Employee e1;
+//    e1.in();
+//    e1.out();
+//    return 0;
+//}
+///===========================================================================================================================================
+///  Another example
+//
+//using namespace std;
+//class Vehical
+//{
+//    int no;
+//    char type[40];
+//    public:
+//       void input()
+//       {
+//           cout << "\n Enter the Vehical Number and type : ";
+//           cin>>no>>type;
+//       }
+//       void output()
+//       {
+//           cout << "\n Number : "<<no << "\t Type : "<<type;
+//       }
+//};
+//class Car : private Vehical
+//{
+//    char color[40];
+//    int mod_no;
+//    public:
+//        void in()
+//        {
+//            input();
+//            cout << "\n Enter the car color and mod_no : ";
+//            cin >> color >> mod_no;
+//        }
+//        void out()
+//        {
+//            output();
+//            cout<< "\n Color : "<<color << "\t Model Number : "<<mod_no;
+//        }
+//};
+//
+//int main()
+//{
+//    Car c1;
+//    c1.in();
+//    c1.out();
+//    return 0;
+//}
+
+///-------------------------------------------------------
+//
+//using namespace std;
+//class Vehical
+//{
+//    int no;
+//    char type[40];
+//    public:
+//       void input()
+//       {
+//           cout << "\n Enter the Vehical Number and type : ";
+//           cin>>no>>type;
+//       }
+//       void output()
+//       {
+//           cout << "\n Number : "<<no << "\t Type : "<<type;
+//       }
+//};
+//class Train : public Vehical
+//{
+//    char name[40];
+//    public:
+//        void in()
+//        {
+//            input();
+//            cout << "\n Enter the Train name : ";
+//            cin >>name;
+//        }
+//        void out()
+//        {
+//            output();
+//            cout<< "\n Train name : "<<name;
+//        }
+//};
+//
+//int main()
+//{
+//    Train t1;
+//    t1.in();
+//    t1.out();
+//    return 0;
+//}
+
+///===========================================================================================================================================
+/**   - Multi-level Inheritance: one to one relationship, more than two layers
+             [   ] Vehical
+               |
+               |
+             [   ] Train
+               |
+               |
+             [   ] Ticket
+*/
+//
+//using namespace std;
+//class Vehical
+//{
+//	int no;
+//	char type[40];
+//    public:
+//	void set()
+//	{
+//		cout<<endl<<"Enter the Type of vehical: ";
+//		cin>>type;
+//		cout<<endl<<"Enter the vehical number: ";
+//		cin>>no;
+//	}
+//	void show()
+//	{
+//		cout<<endl<<"Type: "<<type<<"\t Number: "<<no;
+//	}
+//};
+//class Train : public Vehical
+//{
+//    char name[40];
+//    public:
+//        void in()
+//        {
+//            set();
+//            cout<<endl<<"Enter the name of train: ";
+//            cin>>name;
+//        }
+//	void out()
+//	{
+//		show();
+//		cout<<endl<<"Name of Train: "<<name;
+//	}
+//
+//};
+//class Ticket : private Train
+//{
+//    char pnm[30];
+//    float price;
+//    public:
+//        void input()
+//        {
+//            in();
+//            cout << "\n enter the passanger name and Ticket price : ";
+//            cin>>pnm>>price;
+//        }
+//        void output()
+//        {
+//            out();
+//            cout<< "\n Passangr Name : "<<pnm<< "  Ticket Price : "<<price;
+//        }
+//};
+//int main()
+//{
+//    Ticket t1;
+//    t1.input();
+//    t1.output();
+//    return 0;
+//}
+///===========================================================================================================================================
+
+/** Using the constructors in inheritance
+
+	When you create object of any child then first it will allocate the memory for
+	base data member, then its member functions are decl. and then it will execute the
+	construcor of base. and perform operations in same sequence for its child.
+*/
+//
+//using namespace std;
+//
+//class A
+//{
+//    int n1;
+//    public:
+//        A()
+//        {
+//            cout << "\n In default constructor in A ";
+//            n1=10;
+//        }
+//        void setA()
+//        {
+//            cout<<endl<<"Enter any No: ";
+//            cin>>n1;
+//        }
+//        void showA()
+//        {
+//            cout<<endl<<"A-n1 is: "<<n1;
+//        }
+//
+//};
+// class B : public A
+// {
+//     int n2;
+//    public:
+//        B()
+//        {
+//            cout << "\n In default constructor in B ";
+//            n2=100;
+//        }
+//        void setB()
+//        {
+//            cout<<endl<<"Enter any No: ";
+//            cin>>n2;
+//        }
+//        void showB()
+//        {
+//            showA();
+//            cout<<endl<<"B-n2 is: "<<n2;
+//        }
+// };
+//int main()
+//{
+//    B ob1;
+//    ob1.showB();
+//    return 0;
+//}
+///===========================================================================================================================================
+/// invoking parameterized constructors of base class
+//
+//using namespace std;
+//class A
+//{
+//    int n1;
+//    public:
+//    A()
+//	{
+//		cout<<endl<<"In the default constructor of A";
+//		n1=10;
+//	}
+//	A(int a)
+//	{
+//	    cout<<endl<<"In the parameterized constructor of A";
+//	    n1=a;
+//	}
+//	void showA()
+//	{
+//		cout<<endl<<"A-n1 is: "<<n1;
+//	}
+//};
+//class B : public A
+//{
+//    int n2;
+//    public:
+//        B()
+//        {
+//            cout<<endl<<"In the default constructor of B";
+//            n2=100;
+//        }
+//        B(int b,int a):A(a)
+//        {
+//            cout<<endl<<"In the parameterized constructor of B";
+//            n2=b;
+//        }
+//        void showB()
+//        {
+//            showA();
+//            cout<<endl<<"B-n2 is: "<<n2;
+//        }
+//};
+//class C : public B
+//{
+//    int n3;
+//    public:
+//        C()
+//        {
+//            cout<<endl<<"In the default constructor of c";
+//            n3=100;
+//        }
+//        C(int c,int b,int a) : B(b,a)
+//        {
+//            cout<<endl<<"In the parameterized constructor of C";
+//            n3=c;
+//        }
+//        void showC()
+//        {
+//            showB();
+//            cout<<endl<<"c-n3 is: "<<n3;
+//        }
+//};
+//
+//int main()
+//{
+//    C ob1;
+//    ob1.showC();
+//    cout<< "\n=============================================\n";
+//    C ob2(333,222,111);///implicit call              // C ob3=C(11,22,33);///(explicit call)
+//    ob2.showC();
+//    return 0;
+//}
+///===========================================================================================================================================
+/**
+// Function overloading in the inheritance
+
+	 A single class may contain two or more functions having same name and with different signature called
+	 function overloading
+
+    */
+//
+//using namespace std;
+//
+//class A
+//{
+//    int n1;
+//    public :
+//        A()
+//        {
+//            cout<<endl<<"In the default constructor of A";
+//            n1=10;
+//        }
+//        void setA()
+//        {
+//            cout<<endl<<"Enter any No: ";
+//            cin>>n1;
+//        }
+//        void setA(int t)
+//        {
+//            n1=t;
+//        }
+//        void showA()
+//        {
+//            cout<<endl<<"A-n1 is: "<<n1;
+//        }
+//};
+//
+//class B :public A
+//{
+//    int n2;
+//    public :
+//        B()
+//        {
+//            cout<<endl<<"In the default constructor of B";
+//            n2=10;
+//        }
+//        void setB()
+//        {
+//            cout<<endl<<"Enter any No: ";
+//            cin>>n2;
+//        }
+//        void setB(int t1 ,int t2)
+//        {
+//            setA(t1);
+//            n2=t2;
+//        }
+//        void showB()
+//        {
+//            showA();
+//            cout<<endl<<"B-n2 is: "<<n2;
+//        }
+//};
+//int main()
+//{
+//    B ob1;
+//    ob1.setB(25,50);
+//    ob1.showB();
+//    return 0;
+//}
+
+///===========================================================================================================================================
+/** Function overriding: when base class function is redefined in child class, and that function will
+	   			be invoked using object of child class then then the child class copy will be
+				executed by disabling the inherited base class copy of function. this overrule
+				is called as function overriding.
+
+*/
+//
+//using namespace std;
+//
+//class Demo
+//{
+//    public:
+//        void msg()
+//        {
+//            cout<<endl<<"In Demo Class";
+//        }
+//};
+//class Test : public Demo
+//{
+//    public:
+//        void msg()
+//        {
+//            cout<<endl<<"In Test Class";
+//        }
+//};
+//int main()
+//{
+//    Test ob1;
+//    ob1.msg();
+//    return 0;
+//}
+///===========================================================================================================================================
+/**In such case if you want to call the base version of function then use the class name as
+
+	<base_class_name>::<function_nm>();
+	*/
+//
+//#include <iostream>
+//using namespace std;
+//class Demo
+//{
+//    public:
+//	void msg()
+//	{
+//		cout<<endl<<"In Demo Class";
+//	}
+//};
+//
+//class Test:public Demo
+//{
+//    public:
+//	void msg()
+//	{
+//	    /// Demo::msg();   #1
+//		cout<<endl<<"In Test Class";
+//	}
+//};
+//
+//int main()
+//{
+//	Test ob;
+//	/// ob.msg(); #1
+//	ob.Demo::msg();
+//	return 0;
+//}
+//
+///----same but different way----------------
+//
+//using namespace std;
+//class Person
+//{
+//    char name[50];
+//   long long int Add_card;
+//    int age;
+//    public:
+//        void input()
+//        {
+//            cout<< "\n Enter the person name,Addharcard number and age : ";
+//            cin>>name>>Add_card>>age;
+//        }
+//        void output()
+//        {
+//            cout<< "\n Name : "<<name<< "\tAddharcard Number : "<<Add_card<<"\t Age : "<<age;
+//        }
+//};
+//
+//class Student : private Person
+//{
+//    float hsc,ssc;
+//    public :
+//        void input()
+//        {
+//            Person :: input();
+//            cout<< "\n Enter the student hsc and ssc mark : ";
+//            cin>>hsc>>ssc;
+//        }
+//        void output()
+//        {
+//            Person :: output();
+//            cout<< "\n Hsc Mark : "<<hsc <<"\t SSC Mark : "<<ssc;
+//        }
+//};
+//
+//int main()
+//{
+//    Student ob1;
+//    ob1.input();
+//    ob1.output();
+//    return 0;
+//}
+
+///===========================================================================================================================================
+/**
+Using "protected": It is visibility modifier/Accessibility specifier, which is used to inherite
+                   base class member without loosing its data hiding.
+
+            We can say that it is "Inheritable Private"
+
+					 Inheritance visibility
+
+	   Base class		private		protected	public
+
+	private Memebers	NI		NI		NI
+
+	protected Memebers	private		protected	protected
+
+	public Memebers		private		protected	public
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
